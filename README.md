@@ -87,3 +87,4 @@ npm run build
 ## 📄 License & Copyright
 
 © 2026 **TypeBurst**. All Rights Reserved.
+https://type-burst.netlify.app/
