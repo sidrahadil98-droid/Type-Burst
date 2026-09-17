@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeBurst - Modern Professional Typing Practice</title>
+    <meta name="description" content="Modern professional typing practice platform to improve speed, accuracy, and keyboard fluency." />
+    <meta property="og:title" content="TypeBurst - Modern Professional Typing Practice" />
+    <meta property="og:description" content="Modern professional typing practice platform to improve speed, accuracy, and keyboard fluency." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Consolidated CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- =========================================================
+         1. PROFESSIONAL STICKY NAVBAR
+         ========================================================= -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Brand Logo -->
+        <button class="brand-logo" data-nav="home" id="brandLogoBtn" aria-label="TypeBurst Home">
+          <div class="brand-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">Type<span>Burst</span></div>
+            <div class="brand-tagline">Speed & Accuracy</div>
+          </div>
+        </button>
+
+        <!-- Desktop Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li><button class="nav-link active" data-nav="home" data-page="home">Home</button></li>
+            <li><button class="nav-link" data-nav="typing-test" data-page="typing-test">Typing Test</button></li>
+            <li><button class="nav-link" data-nav="services" data-page="services">Services</button></li>
+            <li><button class="nav-link" data-nav="about" data-page="about">About</button></li>
+            <li><button class="nav-link" data-nav="contact" data-page="contact">Contact</button></li>
+          </ul>
+        </nav>
+
+        <!-- Start Typing CTA Button -->
+        <button class="nav-btn" data-nav="typing-test" id="navStartTypingBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+            <line x1="6" y1="8" x2="6" y2="8"></line>
+            <line x1="10" y1="8" x2="10" y2="8"></line>
+            <line x1="14" y1="8" x2="14" y2="8"></line>
+            <line x1="18" y1="8" x2="18" y2="8"></line>
+            <line x1="6" y1="12" x2="6" y2="12"></line>
+            <line x1="10" y1="12" x2="10" y2="12"></line>
+            <line x1="14" y1="12" x2="14" y2="12"></line>
+            <line x1="18" y1="12" x2="18" y2="12"></line>
+            <line x1="7" y1="16" x2="17" y2="16"></line>
+          </svg>
+          <span>Start Typing</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Toggle Navigation Menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-nav-link active" data-nav="home" data-page="home">Home</button>
+        <button class="mobile-nav-link" data-nav="typing-test" data-page="typing-test">Typing Test</button>
+        <button class="mobile-nav-link" data-nav="services" data-page="services">Services</button>
+        <button class="mobile-nav-link" data-nav="about" data-page="about">About</button>
+        <button class="mobile-nav-link" data-nav="contact" data-page="contact">Contact</button>
+        <button class="btn btn-primary mobile-nav-btn" data-nav="typing-test">
+          <span>Start Typing Now</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         2. MAIN CONTENT WRAPPER (Multi-Page SPA Architecture)
+         ========================================================= -->
+    <main>
+      <!-- =====================================================
+           PAGE 1: HOME PAGE
+           ===================================================== -->
+      <section id="home-page" class="page-view active">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="container hero-grid">
+            <!-- Hero Left Content -->
+            <div class="hero-text">
+              <div class="badge-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                Next-Generation Typing Platform
+              </div>
+              <h1>Master Your Typing Skills with <span>TypeBurst</span></h1>
+              <p>Improve your typing speed, accuracy, and confidence with engaging typing practice designed for everyone.</p>
+              
+              <div class="hero-actions">
+                <button class="btn btn-primary" data-nav="typing-test" id="heroStartTypingBtn">
+                  <span>Start Typing</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+                <button class="btn btn-secondary" data-nav="services" id="heroExploreServicesBtn">
+                  <span>Explore Services</span>
+                </button>
+              </div>
+
+              <div class="hero-checks">
+                <div class="hero-check-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>100+ Unique Phrases</span>
+                </div>
+                <div class="hero-check-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Real-Time Feedback</span>
+                </div>
+                <div class="hero-check-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Zero Lag & Free</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Right: Interactive Warm-up Preview Card -->
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="window-title">typeburst-engine.js</span>
+                <span class="live-badge">⚡ Live Preview</span>
+              </div>
+
+              <div class="mini-prompt-box" id="miniPrompt">
+                TypeBurst delivers smooth, reliable typing drills.
+              </div>
+
+              <input
+                type="text"
+                class="mini-input"
+                id="miniInput"
+                placeholder="Test type here to see live feedback..."
+                autocomplete="off"
+              />
+
+              <div class="mini-stats-grid">
+                <div class="mini-stat-card purple-tint">
+                  <div class="mini-stat-val">74</div>
+                  <div class="mini-stat-label">Avg WPM</div>
+                </div>
+                <div class="mini-stat-card">
+                  <div class="mini-stat-val">98.5%</div>
+                  <div class="mini-stat-label">Accuracy</div>
+                </div>
+                <div class="mini-stat-card">
+                  <div class="mini-stat-val" style="color:var(--success);">FAST</div>
+                  <div class="mini-stat-label">Rating</div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" style="width:100%; border-radius:var(--radius-md);" data-nav="typing-test">
+                <span>Launch Full 60s Typing Test</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features / Stats Section -->
+        <div class="features-section">
+          <div class="container">
+            <div class="features-box">
+              <div class="section-header">
+                <div class="badge-pill">Performance Highlights</div>
+                <h2 class="section-title">Engineered for Rapid Typing Growth</h2>
+                <p class="section-subtitle">Real-time diagnostics and progressive drills to turn keyboard friction into effortless flow.</p>
+              </div>
+
+              <div class="features-grid">
+                <div class="feature-card">
+                  <div class="feature-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <h4>Fast Typing Practice</h4>
+                  <p>Streamlined 60-second sprints designed to build fast touch-typing muscle memory without clutter.</p>
+                </div>
+
+                <div class="feature-card">
+                  <div class="feature-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                  </div>
+                  <h4>Accuracy Tracking</h4>
+                  <p>Keystroke-level error detection pinpoints subtle finger mistakes to ensure clean, consistent typing.</p>
+                </div>
+
+                <div class="feature-card">
+                  <div class="feature-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  </div>
+                  <h4>WPM Tracking</h4>
+                  <p>Standardized Gross Words-Per-Minute calculations updated smoothly as you complete each word.</p>
+                </div>
+
+                <div class="feature-card">
+                  <div class="feature-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  </div>
+                  <h4>Real-Time Feedback</h4>
+                  <p>Instant color-coded cues for correct letters, mistake wavy underlines, and comprehensive evaluation cards.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Choose TypeBurst? Section -->
+        <div class="why-section">
+          <div class="container">
+            <div class="section-header">
+              <div class="badge-pill">Core Benefits</div>
+              <h2 class="section-title">Why Choose TypeBurst?</h2>
+              <p class="section-subtitle">A focused, distraction-free environment that delivers tangible keyboard fluency.</p>
+            </div>
+
+            <div class="why-grid">
+              <div class="why-card">
+                <div class="why-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <h3>Improve Speed</h3>
+                <p>Break through typing plateaus and accelerate your words per minute with structured timed drills.</p>
+              </div>
+
+              <div class="why-card">
+                <div class="why-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+                <h3>Increase Accuracy</h3>
+                <p>Reduce backspacing frustration. Learn steady keystroke rhythm that eliminates costly typos.</p>
+              </div>
+
+              <div class="why-card">
+                <div class="why-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <h3>Track Progress</h3>
+                <p>Instant post-test performance breakdown showing speed class, consistency percentage, and exact errors.</p>
+              </div>
+
+              <div class="why-card">
+                <div class="why-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <h3>Practice Anywhere</h3>
+                <p>Responsive layout tailored for desktops, laptops, tablets, and phones without lag or downloads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-banner">
+          <div class="container">
+            <div class="cta-box">
+              <h2>Ready to Improve Your Typing?</h2>
+              <p>Start a 60-second typing test right now and discover your baseline speed and accuracy.</p>
+              <button class="btn btn-primary" data-nav="typing-test">
+                <span>Start Typing Now</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PAGE 2: TYPING TEST PAGE
+           ===================================================== -->
+      <section id="typing-test-page" class="page-view">
+        <div class="test-section">
+          <div class="container">
+            <div class="section-header" style="margin-bottom:32px;">
+              <div class="badge-pill">Live Practice Engine</div>
+              <h1 class="section-title">Speed & Accuracy Test</h1>
+              <p class="section-subtitle">Click inside the text area or begin typing. The 60-second timer begins automatically on your first keypress.</p>
+            </div>
+
+            <!-- Main Tester Card -->
+            <div class="tester-card">
+              <!-- Top Category Selector Row -->
+              <div class="category-filter-row">
+                <div class="category-pills">
+                  <button class="category-pill active" data-cat="all">All Modes</button>
+                  <button class="category-pill" data-cat="beginner">Beginner</button>
+                  <button class="category-pill" data-cat="intermediate">Intermediate</button>
+                  <button class="category-pill" data-cat="advanced">Advanced</button>
+                  <button class="category-pill" data-cat="programming">Tech & Code</button>
+                </div>
+                <div class="test-meta-info">
+                  <span class="pulse-dot"></span>
+                  <span id="categoryMeta">General</span>
+                  <span>·</span>
+                  <span id="charCountMeta">0 chars</span>
+                </div>
+              </div>
+
+              <!-- Real-time Progress Bar -->
+              <div class="progress-container">
+                <div class="progress-header">
+                  <span>Phrase Completion</span>
+                  <span id="progressPercentText" style="font-weight:700; color:var(--primary);">0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+              </div>
+
+              <!-- Prompt Display Box -->
+              <div class="prompt-wrapper" id="promptWrapper">
+                <div id="promptDisplay"></div>
+                <div class="input-area">
+                  <input
+                    type="text"
+                    id="userInput"
+                    autofocus
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                  />
+                </div>
+              </div>
+
+              <!-- Stats Row: WPM, ACCURACY, TIMER -->
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-label-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>WPM</span>
+                  </div>
+                  <div class="stat-figure" id="wpm">0</div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-label-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    <span>Accuracy</span>
+                  </div>
+                  <div class="stat-figure"><span id="accuracy">100</span><span style="font-size:1.1rem; color:var(--text-muted); margin-left:2px;">%</span></div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-label-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 10"></polyline></svg>
+                    <span>Timer</span>
+                  </div>
+                  <div class="stat-figure timer" id="timer">60<span style="font-size:1.1rem; color:var(--text-muted); margin-left:2px;">s</span></div>
+                </div>
+              </div>
+
+              <!-- Center Action Buttons -->
+              <div class="test-actions">
+                <button class="btn btn-secondary" id="resetBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+                  <span>New Test / Restart</span>
+                </button>
+                <button class="btn btn-primary" id="showResultBtn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <span>View Result Stats</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Helpful Practice Tips -->
+            <div class="test-tips-grid">
+              <div class="test-tip-card">
+                <div class="test-tip-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle></svg>
+                </div>
+                <div class="test-tip-content">
+                  <h5>Precision First</h5>
+                  <p>Speed naturally rises once you reduce backspacing and awkward finger hesitation.</p>
+                </div>
+              </div>
+
+              <div class="test-tip-card">
+                <div class="test-tip-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div class="test-tip-content">
+                  <h5>Steady Cadence</h5>
+                  <p>A calm, continuous rhythm always beats rushed bursts followed by long pauses.</p>
+                </div>
+              </div>
+
+              <div class="test-tip-card">
+                <div class="test-tip-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <div class="test-tip-content">
+                  <h5>Daily Habit</h5>
+                  <p>Two 60-second drills every day will build lasting finger muscle memory within 2 weeks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PAGE 3: SERVICES PAGE
+           ===================================================== -->
+      <section id="services-page" class="page-view">
+        <div class="services-section">
+          <div class="container">
+            <div class="section-header">
+              <div class="badge-pill">Curated Training Modules</div>
+              <h1 class="section-title">Typing Services</h1>
+              <p class="section-subtitle">Tools and features designed to help you become a faster and more accurate typist.</p>
+            </div>
+
+            <!-- 6 Service Cards Grid -->
+            <div class="services-grid">
+              <!-- Card 1 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <span class="service-badge">Speed</span>
+                  </div>
+                  <h3>Typing Speed Practice</h3>
+                  <p>Practice regularly and improve your words-per-minute performance with high-cadence timed tests.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">Start Speed Drill</button>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    </div>
+                    <span class="service-badge">Accuracy</span>
+                  </div>
+                  <h3>Accuracy Training</h3>
+                  <p>Focus on reducing typing mistakes and building consistent accuracy through character-by-character analysis.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">Practice Accuracy</button>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <span class="service-badge">Analytics</span>
+                  </div>
+                  <h3>Real-Time Performance</h3>
+                  <p>Track your WPM, accuracy, score, and progress while typing with instant live feedback gauges.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">View Live Engine</button>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
+                    <span class="service-badge">Daily</span>
+                  </div>
+                  <h3>Daily Typing Practice</h3>
+                  <p>Practice with different phrases and challenges every day from our expanded 100+ quote library.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">Today's Practice</button>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <span class="service-badge">Beginner</span>
+                  </div>
+                  <h3>Beginner Training</h3>
+                  <p>Simple phrases and exercises for users who are learning touch typing and home-row muscle memory.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">Beginner Mode</button>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="service-card">
+                <div>
+                  <div class="service-header">
+                    <div class="service-icon">
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <span class="service-badge">Advanced</span>
+                  </div>
+                  <h3>Advanced Practice</h3>
+                  <p>Longer and more challenging phrases for experienced typists including code syntax, numbers, and symbols.</p>
+                </div>
+                <button class="btn btn-secondary service-card-btn" data-nav="typing-test">Advanced Mode</button>
+              </div>
+            </div>
+
+            <!-- Process Workflow Banner -->
+            <div class="process-banner">
+              <div>
+                <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:6px;">How TypeBurst Practice Works</h3>
+                <p style="font-size:0.9rem; color:#94a3b8;">Three simple steps to measure and improve your keyboard performance daily.</p>
+              </div>
+              <div class="process-steps">
+                <div class="process-step">
+                  <div class="step-num">01</div>
+                  <div class="step-label">Select Category</div>
+                </div>
+                <div class="step-divider"></div>
+                <div class="process-step">
+                  <div class="step-num">02</div>
+                  <div class="step-label">Type 60 Seconds</div>
+                </div>
+                <div class="step-divider"></div>
+                <div class="process-step">
+                  <div class="step-num">03</div>
+                  <div class="step-label">Evaluate WPM</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services CTA Banner -->
+            <div class="cta-banner" style="padding:0;">
+              <div class="cta-box" style="background:#ffffff; color:var(--text-dark); border:1px solid var(--border);">
+                <h2>Start Your Typing Journey Today</h2>
+                <p style="color:var(--text-muted);">Join thousands of typists who build daily speed and confidence with TypeBurst.</p>
+                <button class="btn btn-primary" data-nav="typing-test" id="servicesStartTypingBtn">
+                  <span>Start Typing</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PAGE 4: ABOUT PAGE
+           ===================================================== -->
+      <section id="about-page" class="page-view">
+        <div class="about-section">
+          <div class="container">
+            <div class="section-header">
+              <div class="badge-pill">Our Philosophy</div>
+              <h1 class="section-title">About TypeBurst</h1>
+              <p class="section-subtitle">TypeBurst is a modern typing practice platform designed to help users improve their typing speed, accuracy, confidence, and productivity through simple and engaging typing exercises.</p>
+            </div>
+
+            <!-- Mission Blockquote Card -->
+            <div class="mission-card">
+              <div class="badge-pill" style="margin-bottom:8px;">Our Mission</div>
+              <blockquote>"Our mission is to make typing practice simple, accessible, and enjoyable for everyone."</blockquote>
+              <p style="font-size:0.95rem; color:var(--text-muted); max-width:640px; margin:0 auto;">Whether you are drafting your first novel, writing production software code, or working across corporate teams, typing speed is your direct conduit to output.</p>
+            </div>
+
+            <!-- What We Offer Section -->
+            <div class="section-header" style="margin-bottom:32px;">
+              <h2 class="section-title" style="font-size:2rem;">What We Offer</h2>
+              <p class="section-subtitle">Everything needed for steady, measurable improvement.</p>
+            </div>
+
+            <div class="offerings-grid">
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Typing Practice</span>
+                </div>
+                <p>Clean, distraction-free interface with instant visual feedback on every single keypress.</p>
+              </div>
+
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Speed Improvement</span>
+                </div>
+                <p>Focused 60-second sprints crafted to push your words-per-minute boundary safely.</p>
+              </div>
+
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Accuracy Training</span>
+                </div>
+                <p>Character-level precision diagnostics so you can identify and eliminate weak finger patterns.</p>
+              </div>
+
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Performance Tracking</span>
+                </div>
+                <p>Comprehensive evaluations with Gross WPM, Accuracy %, Consistency Score, and Speed Tiers.</p>
+              </div>
+
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Beginner Exercises</span>
+                </div>
+                <p>Short and simple sentences designed to help new typists build steady touch-typing habits.</p>
+              </div>
+
+              <div class="offering-card">
+                <div class="offering-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Advanced Exercises</span>
+                </div>
+                <p>Challenging passages containing technical terms, punctuation, code syntax, and numbers.</p>
+              </div>
+            </div>
+
+            <!-- Why TypeBurst? Roles Section -->
+            <div class="section-header" style="margin-bottom:32px;">
+              <h2 class="section-title" style="font-size:2rem;">Why TypeBurst?</h2>
+              <p class="section-subtitle">How regular practice empowers individuals in every walk of digital life.</p>
+            </div>
+
+            <div class="roles-grid">
+              <div class="role-card">
+                <div class="role-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div class="role-content">
+                  <h4>Developers & Engineers</h4>
+                  <p>Type syntax, variables, Git commands, and SQL queries with effortless fluidity during coding sessions.</p>
+                </div>
+              </div>
+
+              <div class="role-card">
+                <div class="role-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div class="role-content">
+                  <h4>Students & Academics</h4>
+                  <p>Write research essays, take rapid lecture notes, and finish timed exams without racing against the clock.</p>
+                </div>
+              </div>
+
+              <div class="role-card">
+                <div class="role-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <div class="role-content">
+                  <h4>Working Professionals</h4>
+                  <p>Draft customer proposals, team updates, and spreadsheets in half the time without embarrassing typos.</p>
+                </div>
+              </div>
+
+              <div class="role-card">
+                <div class="role-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+                </div>
+                <div class="role-content">
+                  <h4>Writers & Everyday Users</h4>
+                  <p>Transfer thoughts directly to the screen seamlessly, keeping your creative flow undisturbed.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 15-Minute Rule Benchmark Card -->
+            <div class="benchmark-box">
+              <div>
+                <div class="badge-pill" style="background:#334155; color:#e2e8f0; border:none; margin-bottom:12px;">The 15-Minute Rule</div>
+                <h3 style="font-size:1.8rem; font-weight:800; line-height:1.25; margin-bottom:12px;">Small Daily Effort, Transformative Speed</h3>
+                <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.6;">Practicing just 15 minutes a day builds lasting muscle memory. Most TypeBurst users experience an average improvement of 15 to 25 WPM within 30 days.</p>
+              </div>
+              <div class="benchmark-stats-list">
+                <div class="benchmark-stat-item">
+                  <span>Starting Average:</span>
+                  <strong>38 - 42 WPM</strong>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span>After 30 Days:</span>
+                  <strong>65 - 80 WPM</strong>
+                </div>
+                <div class="benchmark-stat-item">
+                  <span>Target Accuracy:</span>
+                  <strong style="color:var(--success);">98%+</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- About CTA Banner -->
+            <div class="cta-banner" style="padding:0;">
+              <div class="cta-box">
+                <h2>Start Improving Your Typing</h2>
+                <p>Take your first test today and experience the difference deliberate practice makes.</p>
+                <button class="btn btn-primary" data-nav="typing-test" id="aboutStartTypingBtn">
+                  <span>Start Improving Your Typing</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           PAGE 5: CONTACT PAGE
+           ===================================================== -->
+      <section id="contact-page" class="page-view">
+        <div class="contact-section">
+          <div class="container">
+            <div class="section-header">
+              <div class="badge-pill">Get In Touch</div>
+              <h1 class="section-title">Contact TypeBurst</h1>
+              <p class="section-subtitle">Have a question or feedback? We'd love to hear from you.</p>
+            </div>
+
+            <!-- Contact Info Cards (Email, Support, Working Hours) -->
+            <div class="contact-info-grid">
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <h3>support@typeburst.com</h3>
+                  <p>Send us your questions, feedback, or enterprise inquiries anytime.</p>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                </div>
+                <div>
+                  <h4>Support</h4>
+                  <h3>Help Desk & Community</h3>
+                  <p>Prompt troubleshooting for browser quirks, timers, or suggestions.</p>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div>
+                  <h4>Working Hours</h4>
+                  <h3>Mon – Fri: 9:00 AM – 6:00 PM EST</h3>
+                  <p>Weekend queries are handled promptly on Monday mornings.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Contact Form Card -->
+            <div class="contact-form-box">
+              <div id="contactSuccess" class="contact-success-state" style="display:none;">
+                <div class="success-circle">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3 style="font-size:1.6rem; font-weight:800; color:var(--text-dark); margin-bottom:8px;">Message Sent Successfully!</h3>
+                <p style="color:var(--text-muted); font-size:0.95rem; max-width:460px; margin:0 auto 24px;">Thank you for getting in touch. Our team has received your note and will get back to you shortly.</p>
+                <button class="btn btn-secondary" id="resetContactFormBtn">Send Another Message</button>
+              </div>
+
+              <form id="contactForm">
+                <div id="formAlert" class="form-alert form-alert-error" style="display:none;"></div>
+
+                <div class="form-grid-row">
+                  <div class="form-group">
+                    <label for="contactName">Name *</label>
+                    <input type="text" id="contactName" class="form-input" placeholder="e.g. Alex Morgan" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" class="form-input" placeholder="alex@example.com" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">Subject</label>
+                  <input type="text" id="contactSubject" class="form-input" placeholder="How can we help?" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage">Message *</label>
+                  <textarea id="contactMessage" class="form-textarea" placeholder="Write your questions, ideas, or feedback here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="sendMessageBtn" style="width:100%; border-radius:var(--radius-pill);">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+         3. RESULT POPUP MODAL (Preserved & Enhanced Evaluation)
+         ========================================================= -->
+    <div class="popup-overlay" id="resultPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-card">
+        <div class="popup-header">
+          <h2 id="popupTitle">🚀 Evaluation Result</h2>
+          <button class="close-popup" id="closePopupBtn" aria-label="Close modal">&times;</button>
+        </div>
+
+        <!-- Speed Badge: SLOW / MEDIUM / FAST -->
+        <div class="badge-container">
+          <div id="speedBadge" class="speed-class-badge speed-slow">–</div>
+        </div>
+
+        <!-- Key Highlighted Metrics -->
+        <div class="metric-highlight">
+          <div class="metric-card highlight">
+            <div class="value" id="popupWpm">0</div>
+            <div class="unit">wpm</div>
+          </div>
+          <div class="metric-card">
+            <div class="value" id="popupAcc">0</div>
+            <div class="unit">% accuracy</div>
+          </div>
+          <div class="metric-card">
+            <div class="value" id="popupTime">0</div>
+            <div class="unit">seconds</div>
+          </div>
+        </div>
+
+        <!-- Progress Metrics -->
+        <div class="result-grid">
+          <div class="result-bar-row">
+            <span class="bar-label">Speed</span>
+            <div class="bar-bg"><div class="bar-fill" id="barSpeed">0%</div></div>
+          </div>
+          <div class="result-bar-row">
+            <span class="bar-label">Accuracy</span>
+            <div class="bar-bg"><div class="bar-fill" id="barAcc">0%</div></div>
+          </div>
+          <div class="result-bar-row">
+            <span class="bar-label">Consistency</span>
+            <div class="bar-bg"><div class="bar-fill" id="barConsistency">0%</div></div>
+          </div>
+        </div>
+
+        <!-- Popup Action Footer -->
+        <div class="popup-footer">
+          <button class="btn btn-primary" id="popupResetBtn" style="width:100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+            <span>⇆ Try Again</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         4. PROFESSIONAL CONSISTENT FOOTER
+         ========================================================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-brand">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div class="brand-icon" style="width:36px; height:36px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <span class="brand-title" style="color:#ffffff;">Type<span style="color:var(--primary);">Burst</span></span>
+            </div>
+            <p>Improve your typing speed, accuracy, and confidence with TypeBurst. Designed for everyone from students to software engineers.</p>
+            <div class="footer-socials">
+              <a href="#github" class="social-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
+              <a href="#twitter" class="social-icon" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+              </a>
+              <a href="#linkedin" class="social-icon" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><button class="footer-link" data-nav="home">Home</button></li>
+              <li><button class="footer-link" data-nav="typing-test">Typing Test</button></li>
+              <li><button class="footer-link" data-nav="services">Services</button></li>
+              <li><button class="footer-link" data-nav="about">About</button></li>
+              <li><button class="footer-link" data-nav="contact">Contact</button></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services -->
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><button class="footer-link" data-nav="services">Speed Practice</button></li>
+              <li><button class="footer-link" data-nav="services">Accuracy Training</button></li>
+              <li><button class="footer-link" data-nav="services">Daily Practice</button></li>
+              <li><button class="footer-link" data-nav="services">Advanced Typing</button></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact -->
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li style="color:#cbd5e1;">Email: support@typeburst.com</li>
+              <li style="color:#cbd5e1;">Support: 24/7 Community Desk</li>
+              <li style="color:#cbd5e1;">Mon – Fri: 9am – 6pm EST</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 TypeBurst. All Rights Reserved.</p>
+          <div style="display:flex; gap:20px;">
+            <a href="#privacy" style="color:#64748b;">Privacy Policy</a>
+            <a href="#terms" style="color:#64748b;">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Consolidated JavaScript -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

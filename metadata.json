@@ -1,0 +1,6 @@
+{
+  "name": "TypeBurst",
+  "description": "Modern professional typing practice platform to improve speed, accuracy, and keyboard fluency.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
